@@ -8,16 +8,31 @@
     "dev": "node --watch --env-file=.env server.js",
     "db:schema": "psql -d tasklist -f db/schema.sql",
     "db:seed": "node --env-file=.env db/seed.js",
-    "db:reset": "npm run db:schema && npm run db:seed"
+    "db:reset": "npm run db:schema && npm run db:seed",
+    "start": "node server.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "pg": "^8.14.1"
+    "pg": "^8.16.0",
+    "seed": "^0.4.4"
   },
   "devDependencies": {
     "supertest": "^7.1.0",
     "vitest": "^3.1.2"
-  }
+  },
+  "version": "1.0.0",
+  "description": "This backend allows users to manage their workload. After making an account, a user will be able to create, read, update, and delete their tasks.",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drewski1987/Tasklist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Drewski1987/Tasklist/issues"
+  },
+  "homepage": "https://github.com/Drewski1987/Tasklist#readme"
 }
