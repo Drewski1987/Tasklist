@@ -12,5 +12,6 @@ CREATE TABLE tasks (
     title TEXT NOT NULL, 
     done BOOLEAN NOT NULL,
     user_id INTEGER NOT NULL
-    
+    FOREIGN KEY (user_id) REFERENCES users(id) 
+    ON DELETE CASCADE 
 )

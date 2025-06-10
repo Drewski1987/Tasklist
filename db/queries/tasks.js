@@ -7,12 +7,11 @@ export async function createTask({title, done, user_id}){
     const {rows: [task]} = await db.query(sql, [title, done, user_id])
     return task
 }
-export async function getTasksByIdFromUsers (id){
+
+export async function getTask(){
     const sql = `
-    SELECT tasks.*, 
-    (
-    SELECT to_json(users)
-    FROM users
-    WHERE users.
+    SELECT * FROM tasks;
     `
+    const {rows: [task]} = await db.query(sql, [id]) 
+    return task
 }
