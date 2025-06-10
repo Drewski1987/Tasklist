@@ -10,7 +10,7 @@ export async function createUser ({username, password}){
     return user
 }
 
-export async function getUsers (){
+export async function getUsers ({username}){
     const sql = `
     SELECT * FROM users WHERE username = $1;;
     `
